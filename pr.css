@@ -1,0 +1,518 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.background-video {      /* Full-Screen Background Video Styling */
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #884d4d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.navbar {               /* Fixed Navigation Bar at the Top */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1c331a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+  z-index: 10;
+}
+
+.menu ul {        /* Navigation Links Container Styling */
+  display: flex;
+  gap: 35px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {            /* Navigation Links Styling */ 
+color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: 50px;
+  transition: 0.3s ease;
+}
+.content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px; /* Lowered from 15px to bring items closer together */
+}
+
+.content h1 {
+  line-height: 1; /* Removes invisible extra space below the huge title */
+  margin-bottom: 0;
+}
+
+.content a {
+  display: inline-block;
+  text-decoration: none;
+  color: #292121;
+  font-size: 20px;
+  border: 2px solid #000000;
+  padding: 12px 40px;
+  border-radius: 50px;
+  margin-top: 20px; /* Keeps good spacing above the Click Me button */
+}
+
+.content h2 {     /* Subtitle Styling */
+  color: #d8d8d8;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: -40px; /* Adjust this number (e.g., -10px, -20px, -25px) until the height looks right */
+}
+
+.menu a:hover {                 /* Hover Effect for Navigation Links */
+  background-color: #5ea75b;
+  color: #ffffff;
+}
+.icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {                  /* Logo Text Styling */
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  font-family: "Playfair Display", serif;
+}
+
+
+
+.logo-image {     /* Logo Image Styling */
+  width: 40px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.video {               /* Video Styling */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%); /* Add this line here */
+}
+
+
+.content {               /* Content Container Styling */
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.eyebrow {        /* Eyebrow Text Styling */
+  color: #d4e8d1;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+.content h1{          /* Main Title Styling */
+  font-size: 95px;
+  color: #d8d8d8;
+  margin-bottom: 50px;
+  font-family: "Oswald", sans-serif;
+}
+
+
+.content a {        /* "Click Me" Button Styling */
+  font-size: 23px;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #fff;
+  padding: 15px 25px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.content a:hover {          /* Hover Effect for "Click Me" Button */
+  background-color: #fff;
+  color: #000000;
+  transition: 0.5s;
+}
+
+/* "About Us" Design */
+.about-section {
+  min-height: 100vh;
+  background-color: #775359;
+  display: flex;
+  align-items: center;
+  padding: 120px 60px 80px;
+}
+
+.about-container {     /* Flex Container for Image and Text */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Circular Photo on the Left */
+.about-image img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Centered Title, Orange Underline & Paragraph on the Right */
+.about-details {
+  max-width: 520px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #252525;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; 
+}
+
+
+/* Short Orange Accent Line Below "ABOUT US" */
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 5px;
+  background-color: #ce9b58;
+  border-radius: 8px;
+  margin: 10px auto 0;
+}
+
+.about-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #252525;
+}
+
+.dark-section .section-title,
+.dark-section .about-text {
+  color: #ffffff;
+}
+
+/* Split Forest Photo Top + Solid Forest Green Bottom */
+.problem-split-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 60px 80px;
+  background: 
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.35) 0%,
+      rgba(0, 0, 0, 0.35) 38%,
+      #2f6246 38%,
+      #2f6246 100%
+    ),
+    url("TREE.jpg"); /* Top forest banner image */
+  background-size: 100% 100%, 100% 42%;
+  background-position: top center, top center;
+  background-repeat: no-repeat;
+}
+
+.problem-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1150px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Left Side: 3 Staggered Circles Container */
+.problem-circles {
+  position: relative;
+  width: 440px;
+  height: 460px;
+  flex-shrink: 0;
+}
+
+.circle-item {
+  position: absolute;
+  width: 205px;
+  height: 205px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #ffffff;      /* Crisp white border like your reference circles */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.circle-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Positions Matching Your Hand-Drawn Sketch */
+.circle-top {
+  top: 0;
+  left: 10px;
+}
+
+.circle-middle {
+  top: 125px;
+  right: 0;
+}
+
+.circle-bottom {
+  bottom: 0;
+  left: 10px;
+}
+
+/* Right Side: "THE PROBLEM" Text */
+.problem-details {
+  max-width: 520px;
+  text-align: center;
+  color: #ffffff;
+  background-color: rgba(20, 45, 32, 0.75); /* Subtle dark green backing so text is easy to read */
+  padding: 40px 35px;
+  border-radius: 16px;
+}
+
+.problem-details .section-title {
+  color: #ffffff;
+}
+
+.problem-text {       /* Paragraph Styling for "THE PROBLEM" Section */
+  font-size: 16px;
+  line-height: 1.8;
+  color: #f4f4f4;
+  margin-bottom: 16px;
+}
+
+/* ================= SOLUTION SECTION ================= */
+.solution-section {
+  min-height: 100vh;
+  /* Replace 'About Background.jpg' with whatever forest image is in your folder */
+  background: linear-gradient(rgba(15, 30, 15, 0.55), rgba(15, 30, 15, 0.55)),
+              url('About Background.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 40px 60px 40px;
+}
+
+.solution-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Left Column: 3 Circular Images */
+.solution-circles {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.solution-circles img {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Middle Column: Phone Mockup & Button */
+.solution-phone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.solution-phone img {
+  width: 270px;
+  height: auto;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.5));
+}
+
+/* Right Column: Dark Translucent Info Card */
+.solution-card {
+  background: rgba(24, 42, 24, 0.82);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 22px;
+  padding: 45px 38px;
+  max-width: 420px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.solution-card h2 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.card-divider {
+  width: 60px;
+  height: 3px;
+  background-color: #c5b358;
+  margin: 0 auto 24px auto;
+  border-radius: 2px;
+}
+
+.solution-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #e8ece8;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.solution-btn {
+  display: inline-block;
+  padding: 12px 34px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  border: 1.5px solid #ffffff;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.08);
+  transition: 0.3s ease;
+  margin-top: 8px;
+}
+
+.solution-btn:hover {
+  background-color: #ffffff;
+  color: #1c331a;
+}
+
+/* ================= CONTACT SECTION ================= */
+.contact-section {
+  min-height: 85vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(10, 25, 12, 0.35) 0%,
+      rgba(15, 45, 22, 0.65) 65%,
+      #14381d 100%
+    ),
+    url('BACKGROUND DAW.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  padding: 80px 20px;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+}
+
+/* Top Logo + Brand Name */
+.contact-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.contact-logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #ffffff;
+}
+
+/* Big "CONTACT US" Title */
+.contact-content h2 {
+  font-size: 72px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin: 0 0 22px 0;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+}
+
+/* Bottom Row: Website, Email, Phone */
+.contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.contact-info a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.contact-info a:hover {
+  color: #c5e1a5;
+  text-decoration: underline;
+}
+
+
+/* Team Pictures Row below Contact Info */
+.contact-team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px; /* Space between each picture */
+  margin-top: 40px; /* Space below the contact links */
+  flex-wrap: wrap;
+}
+
+.contact-team img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%; /* Turns square images into circles to match the rest */
+  object-fit: cover;
+  border: 2.5px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
